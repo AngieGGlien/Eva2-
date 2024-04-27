@@ -1,7 +1,7 @@
 .layout {
     display: grid;
     gap: 4px;
-    grid-template-rows: 80px auto auto 60px;
+    grid-template-rows: 80px auto auto 80px;
     grid-template-columns: 1fr;
     grid-template-areas: 'header' 'sidebar' 'main' 'footer';
     height: 100vh;
@@ -9,7 +9,7 @@
 @media (min-width:480px) {
     .layout {
         display: grid;
-        grid-template-rows: 60px auto 80px 40px;
+        grid-template-rows: 60px auto 80px ;
         grid-template-columns: 240px auto auto;
         grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';
     }
@@ -19,6 +19,7 @@ header {
     background: #c08bfd;
     text-align: center;
     padding: auto;
+    height: 200px;
 }
 footer {
     grid-area: footer;
@@ -33,23 +34,61 @@ footer {
     grid-area: main;
     background: #b2ee94;
     padding: 20px;
+    height: 1000px;
  }
- table, th, td {
+table, th, td {
     border-collapse: collapse;
 }
-table {width: 70%};
-th {width: 20%;}
-tr {height: 30px;}
-td {width: 200px;}
-img {
-    max-width: 100%; 
-    height: auto; 
+th,tr,td{
+    width: 20% 20% 200px; 
+    height: 50% 30px;
 }
-h1 {
+
+img {
+    width: 70%;
+    max-width: 90%; 
+    height: auto;
+}
+h1, h2 {
     font-family: "Broadway", sans-serif;
+    text-align: center;
 }
 
 body {
     font-family: "Lato", sans-serif ;
 }
-
+.gallery{
+    display: flex;
+    gap: 2px;
+}
+.card{
+    position: relative;
+    left: 0px;
+    width: 80px;
+    border-radius: 2px;
+    padding: auto;
+    height: 300px;
+    background-color: white;
+    transition: 0.4s ease-in-out;
+    flex: 1px;
+}
+.card:nth-child(1){
+    background-color:#fb81ff;
+}
+.card:nth-child(2){
+    background-color:#df76f9;
+}
+.card:nth-child(3){
+    background-color:#ca62fb;
+}
+.card:nth-child(4){
+    background-color: #e656fc;
+}
+.card:nth-child(5){
+    background-color:#f650ff;
+}
+.card:hover{
+    flex:3;
+    font-weight: bold;
+    cursor:pointer;
+}
