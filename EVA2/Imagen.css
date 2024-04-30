@@ -10,31 +10,34 @@
     .layout {
         display: grid;
         grid-template-rows: 60px auto 80px ;
-        grid-template-columns: 240px auto auto;
+        grid-template-columns: auto auto auto;
         grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';
     }
 }
 header {
     grid-area: header;
-    background: #c08bfd;
+    background:  #c08bfd;
     text-align: center;
     padding: auto;
-    height: 200px;
+    height: 100vh;
 }
 footer {
+    text-align: center;
+    padding: auto;
     grid-area: footer;
     background: #c08bfd;
+    height: 300px;
 }
- nav {
+nav {
     grid-area: sidebar;
     background: #f6c356;
     padding: auto;
  }
- main{
+main{
     grid-area: main;
     background: #b2ee94;
     padding: 20px;
-    height: 1000px;
+    height: 800px;
  }
 table, th, td {
     border-collapse: collapse;
@@ -46,10 +49,11 @@ th,tr,td{
 
 img {
     width: 70%;
-    max-width: 90%; 
+    max-width: 80%; 
+    min-height: 150px;
     height: auto;
 }
-h1, h2 {
+h1, h2{
     font-family: "Broadway", sans-serif;
     text-align: center;
 }
