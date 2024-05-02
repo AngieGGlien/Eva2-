@@ -6,21 +6,24 @@
     grid-template-areas: 'header' 'sidebar' 'main' 'footer';
     height: 100vh;
 }
-@media (min-width:480px) {
+
+@media (min-width:768px) {
     .layout {
         display: grid;
-        grid-template-rows: 60px auto 80px ;
+        grid-template-rows: 60px auto 80px;
         grid-template-columns: auto auto auto;
         grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';
     }
 }
+
 header {
     grid-area: header;
-    background:  #c08bfd;
+    background: #c08bfd;
     text-align: center;
     padding: auto;
     height: 100vh;
 }
+
 footer {
     text-align: center;
     padding: auto;
@@ -28,44 +31,56 @@ footer {
     background: #c08bfd;
     height: 300px;
 }
+
 nav {
     grid-area: sidebar;
     background: #f6c356;
     padding: auto;
- }
-main{
+}
+
+main {
     grid-area: main;
     background: #b2ee94;
     padding: 20px;
     height: 800px;
- }
-table, th, td {
+}
+
+table,
+th,
+td {
     border-collapse: collapse;
 }
-th,tr,td{
-    width: 20% 20% 200px; 
+
+th,
+tr,
+td {
+    width: 20% 20% 200px;
     height: 50% 30px;
 }
 
 img {
     width: 70%;
-    max-width: 80%; 
+    max-width: 80%;
     min-height: 150px;
     height: auto;
 }
-h1, h2{
+
+h1,
+h2 {
     font-family: "Broadway", sans-serif;
     text-align: center;
 }
 
 body {
-    font-family: "Lato", sans-serif ;
+    font-family: "Lato", sans-serif;
 }
-.gallery{
+
+.gallery {
     display: flex;
     gap: 2px;
 }
-.card{
+
+.card {
     position: relative;
     left: 0px;
     width: 80px;
@@ -76,23 +91,29 @@ body {
     transition: 0.4s ease-in-out;
     flex: 1px;
 }
-.card:nth-child(1){
-    background-color:#fb81ff;
+
+.card:nth-child(1) {
+    background-color: #fb81ff;
 }
-.card:nth-child(2){
-    background-color:#df76f9;
+
+.card:nth-child(2) {
+    background-color: #df76f9;
 }
-.card:nth-child(3){
-    background-color:#ca62fb;
+
+.card:nth-child(3) {
+    background-color: #ca62fb;
 }
-.card:nth-child(4){
+
+.card:nth-child(4) {
     background-color: #e656fc;
 }
-.card:nth-child(5){
-    background-color:#f650ff;
+
+.card:nth-child(5) {
+    background-color: #f650ff;
 }
-.card:hover{
-    flex:3;
+
+.card:hover {
+    flex: 3;
     font-weight: bold;
-    cursor:pointer;
+    cursor: pointer;
 }
